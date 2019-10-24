@@ -13,9 +13,9 @@
 
             {% for job in jobs %}
                 <div class="job-box">
-                    <h2 class="govuk-heading-s">{{ job.title }}</h2>
+                    <h2 class="govuk-heading-s">{{ job.role }} at {{ job.company }}</h2>
                     <p>{{ job.description }}</p>
-                    <a href="./jobs/{{ job.ID }}">View job</a>
+                    <a href="./jobs/{{ job.id }}">View job</a>
                 </div>
             {% endfor %}
 
