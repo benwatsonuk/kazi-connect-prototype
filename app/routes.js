@@ -27,9 +27,26 @@ router.get('/v1/jobs', (req, res) => {
   })
 })
 
-router.get(['/v1/job', '/v1/job/1'], (req, res) => {
+router.get(['/v1/job/:jobId'], (req, res) => {
+  const jobId = [req.params.jobId] || 0
+  const job = jobs[jobId]
   res.render('v1/job', {
-    job: 1
+    job: job
+  })
+})
+
+router.get(['/v1/apply/:jobId'], (req, res) => {
+  const jobId = [req.params.jobId] || 0
+  const job = jobs[jobId]
+  res.render('v1/apply', {
+    job: job
+  })
+})
+
+router.get('/v1/confirmation', (req, res) => {
+  let employerName = req.query.employerName || 'TANESCO'
+  res.render('v1/confirmation', {
+    employerName: employerName
   })
 })
 

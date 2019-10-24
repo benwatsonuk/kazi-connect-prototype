@@ -1,4 +1,11 @@
-<h1 class="govuk-heading-xl">
-    <img src="/public/images/logo.png" alt="Logo" />
-    Kazi Connect
-</h1>
+{% macro kaziHeader(title, name, showName = true) %}
+    {% if name and showName === true %}
+    Signed in as {{ name }}
+    {% endif %}
+    <h1 class="govuk-heading-xl">
+        <img src="/public/images/logo.png" alt="Logo"/>
+        Kazi Connect
+    </h1>
+    <h2>{{ title }}</h2>
+
+{% endmacro %}
