@@ -7,15 +7,21 @@
 {% block content %}
 
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-grid-column-full">
+
             {% from '../includes/kazi-header.html' import kaziHeader %}
-            {{ kaziHeader('Check your CV', 'Victor') }}
+            {{ kaziHeader('Check your CV', user.name) }}
+
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
 
             <a href="../confirmation?employerName={{ job.company }}" class="govuk-button">I would like to continue</a>
 
         </div>
 
 
-        </div>
+    </div>
 
 {% endblock %}
