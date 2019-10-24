@@ -1,0 +1,25 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+    Kazi Connect
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            {% include '../includes/kazi-header.html' %}
+            All jobs listed
+
+            {% for job in jobs %}
+                <div class="job-box">
+                    <h2 class="govuk-heading-s">{{ job.title }}</h2>
+                    <p>{{ job.description }}</p>
+                    <a href="./jobs/{{ job.ID }}">View job</a>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}
