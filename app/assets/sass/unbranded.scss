@@ -23,6 +23,19 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 
 @import "node_modules/govuk-frontend/govuk/all";
 
+$kaziBlue: rgba(28, 178, 196, 1);
+$kaziGreen: rgba(200, 218, 101, 1);
+$kaziBlack: rgba(56, 67, 77, 1);
+
+.govuk-main-wrapper {
+  //padding-top: 0 !important;
+}
+
+#topBanner {
+  background: #eee;
+  margin-bottom: 2em;
+}
+
 #logo {
   max-width: 150px;
   display: inline-block;
@@ -40,3 +53,22 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
     background: rgba($govuk-border-colour, 0.5);
   }
 }
+
+.govuk-button {
+  background: $kaziBlue;
+  transition: all 0.5s;
+  &:hover, &:focus {
+    background: darken($kaziBlue, 15%);
+  }
+}
+
+.govuk-heading-xl {
+  color: $kaziBlack;
+  text-transform: uppercase;
+}
+
+.govuk-panel--confirmation {
+  background: $kaziGreen;
+  color: $kaziBlack;
+}
+
