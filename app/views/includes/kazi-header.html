@@ -3,11 +3,12 @@
     Signed in as {{ name }}
     {% endif %}
     <h1 class="govuk-heading-xl">
-        <img src="/public/images/logo.png" alt="Logo"/>
-        Kazi Connect
+        <img src="/public/images/logo.png" alt="Logo" id="logo"/>
+        {% if title !== false %}
+            {{ title }}
+        {% endif %}
+{#        Kazi Connect#}
     </h1>
-    {% if title !== false %}
-    <h2>{{ title }}</h2>
-    {% endif %}
+
 
 {% endmacro %}

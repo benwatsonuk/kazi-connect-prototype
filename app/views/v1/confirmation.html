@@ -11,7 +11,7 @@
         <div class="govuk-grid-column-full">
 
             {% from '../includes/kazi-header.html' import kaziHeader %}
-            {{ kaziHeader(false, user.name) }}
+            {{ kaziHeader('Well done ' + user.name + '!', user.name) }}
 
         </div>
 
@@ -19,7 +19,7 @@
             {% include '../includes/kazi-header.html' %}
 
             <div class="govuk-panel govuk-panel--confirmation">
-                <h1 class="govuk-panel__title">Well done {{ user.name }}, you have sent your job application
+                <h1 class="govuk-panel__title">You have sent your job application
                     to {{ employerName }}</h1>
                 <div class="govuk-panel__body">
                     Good luck!

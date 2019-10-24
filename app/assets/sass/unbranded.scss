@@ -5,7 +5,7 @@
 
 // Import colour palette and applied colours so that we can use
 // $govuk-body-background-colour in our overrides below.
-// 
+//
 // If you need to enable compatibility mode or the legacy palette, do that
 // *before* these imports.
 @import "node_modules/govuk-frontend/govuk/settings/colours-palette";
@@ -22,3 +22,21 @@ $govuk-font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", san
 $govuk-canvas-background-colour: $govuk-body-background-colour;
 
 @import "node_modules/govuk-frontend/govuk/all";
+
+#logo {
+  max-width: 150px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.job-box {
+  border-radius: 5px;
+  border: 2px solid $govuk-border-colour;
+  padding: 1em;
+  margin-bottom: 2em;
+  background: rgba($govuk-border-colour, 0.1);
+  transition: all 0.5s;
+  &:hover, &:focus {
+    background: rgba($govuk-border-colour, 0.5);
+  }
+}
