@@ -11,17 +11,29 @@
         <div class="govuk-grid-column-full">
 
             {% from '../includes/kazi-header.html' import kaziHeader %}
-            {{ kaziHeader('Single Job description', user.name) }}
+            {{ kaziHeader('Job details', user.name) }}
 
         </div>
 
         <div class="govuk-grid-column-two-thirds">
+            {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-            {{ job.company }}
+            <p><strong>Company</strong>: {{ job.company }}</p>
+            <p><strong>Role</strong>: {{ job.role }}</p>
+            <p><strong>Location</strong>: {{ job.location }}</p>
+            <p><strong>Salary</strong>: {{ job.salary }}</p>
+            <p><strong>Requirements</strong>: {{ job.requirements }}</p>
+            <p><strong>Job details</strong>: {{ job.jobDetails | safe }}</p>
+            {{ govukDetails({
+                summaryText: "More information about company",
+                text: job.companyProfile | safe
+            }) }}
 
         </div>
         <div class="govuk-grid-column-one-third">
-            <a href="../apply/{{ job.id }}" class="govuk-button">I would like to apply for this job</a>
+            <p><strong>Type:</strong> {{ job.time }}</p>
+            <p><strong>Positions:</strong> {{ job.number }}</p>
+            <a href="../confirmation?employerName={{ job.company }}" class="govuk-button">I would like to apply for this job</a>
         </div>
 
     </div>
