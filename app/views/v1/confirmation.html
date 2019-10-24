@@ -7,18 +7,22 @@
 {% block content %}
 
     <div class="govuk-grid-row">
+
+        {% from '../includes/kazi-header.html' import kaziHeader %}
+        {{ kaziHeader(false, 'Victor') }}
+
         <div class="govuk-grid-column-two-thirds">
             {% include '../includes/kazi-header.html' %}
 
             <div class="govuk-panel govuk-panel--confirmation">
-                <h1 class="govuk-panel__title">We've sent your job application to {{ employerName }}</h1>
+                <h1 class="govuk-panel__title">Well done {{ name }}, you have sent your job application to {{ employerName }}</h1>
                 <div class="govuk-panel__body">
                     Good luck!
                 </div>
             </div>
 
             <p>
-                We have sent you a confirmation email and SMS.
+                We will send you a confirmation email and SMS.
             </p>
 
             <h2 class="govuk-heading-m">What happens next</h2>

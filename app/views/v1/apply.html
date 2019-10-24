@@ -8,17 +8,13 @@
 
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            {% include '../includes/kazi-header.html' %}
-            Job application
+            {% from '../includes/kazi-header.html' import kaziHeader %}
+            {{ kaziHeader('Check your CV', 'Victor') }}
 
-
-
-
+            <a href="../confirmation?employerName={{ job.company }}" class="govuk-button">I would like to continue</a>
 
         </div>
-        <div class="govuk-grid-column-one-third">
-            <a href="../apply/{{ job.id }}" class="govuk-button">I would like to apply for this job</a>
-        </div>
+
 
         </div>
 

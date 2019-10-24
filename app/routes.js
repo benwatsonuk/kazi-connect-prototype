@@ -43,7 +43,7 @@ router.get(['/v1/apply/:jobId'], (req, res) => {
   })
 })
 
-router.get('/v1/confirmation', (req, res) => {
+router.get(['/v1/confirmation'], (req, res) => {
   let employerName = req.query.employerName || 'TANESCO'
   res.render('v1/confirmation', {
     employerName: employerName
