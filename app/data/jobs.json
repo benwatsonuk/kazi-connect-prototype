@@ -1,0 +1,60 @@
+[
+  {
+    "id": 0,
+    "title": "",
+    "company": "Rotana",
+    "role": "Junior Mechanical Supervisor",
+    "type": "mechanical",
+    "time": "Full-time",
+    "location": "Lindi, Tanzania",
+    "description": "A junior electrician with Level 3 qualifications required for role in Dar es Salaam",
+    "salary": "TSh 300K - 500K per month",
+    "requirements": "Grade 3 VETA Certification or Diploma in Mechanical",
+    "number": "6 positions",
+    "companyProfile": "<p>Rotana Hotel Management Corporation (Rotana) was founded in 1992, by a partnership between two visionary thinkers, Nasser Al Nowais and Selim El Zyr.</p> <p>Rotana's plans to grow from the two properties it started in 1993 to a total of 80 by 2020. With several further properties planned for opening and new projects in the pipeline confirming the company’s intention to have a Rotana managed property in all the major cities throughout the Middle East, Africa and Eastern Europe within the next five years.</p>",
+    "jobDetails": "As a General Mechanical Supervisor you are responsible to supervise and coordinate the installation, modification and maintenance of equipment and your role will include key responsibilities such as:  <ul><li>Maintain all kitchen and laundry equipments in good working order</li> <li>Prepare preventive maintenance schedule</li> <li>Maintain the cleanliness of all kitchen and laundry equipments</li> </ul>"
+  },
+  {
+    "id": 1,
+    "title": "",
+    "company": "Chalinze Water Supply and Sanitation Authority (CHALIWASA)\n",
+    "role": "Electrical Technician",
+    "type": "mechanical",
+    "time": "Full-time",
+    "location": "Morogoro, Tanzania",
+    "description": "",
+    "salary": "TSh 500K - 800K per month",
+    "requirements": "Grade 3 VETA Certification or Diploma in Mechanical",
+    "number": "2",
+    "companyProfile": "Chalinze Water Supply and Sanitation Authority (CHALIWASA) was officially declared in the Government Notice No. 376 on 30th November 2012 as a fully fledged authority. Initially it was known among the National Water Projects which was initiated by the Government of the United Republic of Tanzania in the 1980’s",
+    "jobDetails": "<ul><li>Designing, maintaining, implementing, or improving electrical instruments, facilities, components, equipment, products, or systems for industrial, commercial or domestic purposes</li> <li>erforming a wide range of engineering tasks by operating computer-assisted design or engineering software and equipment. \n</li> <li>Conferring with customers, engineers, and others to discuss existing or potential engineering products or projects.</li> </ul>"
+  },  {
+    "id": 2,
+    "title": "Electrician",
+    "company": "Vipaji Inc Corporate Limited",
+    "role": "Electrician",
+    "type": "electrician",
+    "time": "Full-time",
+    "location": "Dar es Salaam, Tanzania",
+    "description": "",
+    "salary": "TSh 700K - 900K per month",
+    "requirements": "Grade 3 VETA Certification",
+    "number": "2",
+    "companyProfile": "Vipaji Inc corporate Limited has been established as a management and human resource consultancy in Tanzania. It is a consultative advisory organization on employment, management, and labour related matters. The company’s traditional business model is based on the accomplishment of management and human resources services. Based on the decision of the company to diversify our services; we have now established this company in Dar es Salaam.\n",
+    "jobDetails": "<ul><li>Respond to daily production needs and interruptions by providing hands-on electrical support in the areas of: process controls, resolving common power system electrical issues, and equipment downtime root cause analysis</li> <li>Completes regular preventive maintenance on all electrical equipment according to established schedules and procedures • Installs, repairs, and troubleshoots Programmable Logic Controllers (PLC) and electrical equipment and parts in accordance with established procedures, guidelines, and regulations \n</li> <li>Provide assistance to other Electrical and Maintenance team members, when required</li> </ul>"
+  },  {
+    "id": 3,
+    "title": "Mason",
+    "company": "Kinondoni, Tanzania",
+    "role": "Mason",
+    "type": "mason",
+    "time": "Full-time",
+    "location": "Kinondoni, Tanzania",
+    "description": "",
+    "salary": "TSh 500K - 900K per month",
+    "requirements": "Grade 3 VETA Certification\n",
+    "number": "1",
+    "companyProfile": "Salama Pharmaceuticals Limited was established in 1987 and is rated as the largest importer and distributor of Pharmaceuticals and Medical Devices in Tanzania.",
+    "jobDetails": "<ul><li>Determine work requirements and sequence through review of work orders, plans, or drawings Operate equipment and machinery required to perform masonry work </li> <li>Prepare surfaces prior to beginning work </li> <li>Mix cement using hoes, cement-mixing equipment, and/or other hand tools</li> </ul>"
+  }
+]
