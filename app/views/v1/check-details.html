@@ -7,61 +7,60 @@
 {% block content %}
 
     <div class="govuk-grid-row">
+        <form method="get" action="../apply/{{ job.id }}">
+            <div class="govuk-grid-column-full">
 
-        <div class="govuk-grid-column-full">
+                {% from '../includes/kazi-header.html' import kaziHeader %}
+                {{ kaziHeader('Check your contact details', user.name) }}
 
-            {% from '../includes/kazi-header.html' import kaziHeader %}
-            {{ kaziHeader('Check your contact details', user.name) }}
+            </div>
 
-        </div>
+            <div class="govuk-grid-column-two-thirds" id="coverLetter">
 
-        <div class="govuk-grid-column-two-thirds" id="coverLetter">
+                {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
-            {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+                {{ govukInsetText({
+                    text: "If " + job.company + " would like to speak with you, it is very important that your contact details are correct. Please check these now."
+                }) }}
 
-            {{ govukInsetText({
-              text: "If " + job.company + " would like to speak with you, it is very important that your contact details are correct. Please check these now."
-            }) }}
+                {% from "govuk/components/input/macro.njk" import govukInput %}
+                {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-            {% from "govuk/components/input/macro.njk" import govukInput %}
-            {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+                {{ govukInput({
+                    label: {
+                        text: "Email address"
+                    },
+                    id: "email",
+                    name: "email"
+                }) }}
 
-            {{ govukInput({
-              label: {
-                text: "Email address"
-              },
-              id: "email",
-              name: "email"
-            }) }}
+                {{ govukInput({
+                    label: {
+                        text: "Mobile phone number"
+                    },
+                    id: "phone",
+                    name: "phone",
+                    value: user.phone
+                }) }}
 
-            {{ govukInput({
-                label: {
-                    text: "Mobile phone number"
-                },
-                id: "phone",
-                name: "phone",
-                value: user.phone
-            }) }}
-
-            {{ govukTextarea({
-                label: {
-                    text: "Address"
-                },
-                id: "address",
-                name: "address",
-                value: user.address
-            }) }}
-
-
-
-        </div>
-
-        <div class="govuk-grid-column-one-third">
-{#            <a href="../apply/{{ job.id }}" class="govuk-button govuk-!-display-block">Continue</a>#}
-            <a href="../confirmation?employerName={{ job.company }}" class="govuk-button govuk-!-display-block">Continue</a>
-        </div>
+                {{ govukTextarea({
+                    label: {
+                        text: "Address"
+                    },
+                    id: "address",
+                    name: "address",
+                    value: user.address
+                }) }}
 
 
-        </div>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+                            <button class="govuk-button govuk-!-display-block" type="submit">Cover letter</button>
+                <a href="../confirmation?employerName={{ job.company }}" class="govuk-button govuk-!-display-block">Continue</a>
+            </div>
+
+        </form>
+    </div>
 
 {% endblock %}

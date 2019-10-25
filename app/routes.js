@@ -36,6 +36,9 @@ router.get(['/v1/job/:jobId'], (req, res) => {
 router.get(['/v1/apply/:jobId'], (req, res) => {
   const jobId = [req.params.jobId] || 0
   const job = jobs[jobId]
+  user.address = req.query.address || false
+  user.phone = req.query.phone || false
+  user.email = req.query.email || false
   res.render('v1/apply', {
     user: user,
     job: job
