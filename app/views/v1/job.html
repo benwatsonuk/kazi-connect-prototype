@@ -33,7 +33,8 @@
         <div class="govuk-grid-column-one-third">
             <p><strong>Type:</strong> {{ job.time }}</p>
             <p><strong>Positions:</strong> {{ job.number }}</p>
-            <a href="../confirmation?employerName={{ job.company }}" class="govuk-button">I would like to apply for this job</a>
+{#            <a href="../confirmation?employerName={{ job.company }}" class="govuk-button  govuk-!-display-block">I would like to apply for this job</a>#}
+            <a href="../check-details/{{ job.id }}" class="govuk-button  govuk-!-display-block">I would like to apply for this job</a>
         </div>
 
     </div>

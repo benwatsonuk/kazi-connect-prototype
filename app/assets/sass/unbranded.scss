@@ -50,6 +50,27 @@ input:focus {
   outline: 3px solid $kaziGreen !important;
 }
 
+.govuk-button--secondary {
+  padding: 0.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.or {
+  text-align: center;
+  display: block;
+}
+
+#coverLetter {
+  .leftAlign {
+    clear: both;
+  }
+  .rightAlign {
+    float: right;
+    text-align: right;
+  }
+}
+
 #code {
   height: 5rem;
   font-size: 5em;

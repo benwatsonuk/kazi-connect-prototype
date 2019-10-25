@@ -11,17 +11,27 @@
         <div class="govuk-grid-column-full">
 
             {% from '../includes/kazi-header.html' import kaziHeader %}
-            {{ kaziHeader('Check your CV', user.name) }}
+            {{ kaziHeader('Check your cover letter', user.name) }}
 
         </div>
 
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-two-thirds" id="coverLetter">
 
-            <a href="../confirmation?employerName={{ job.company }}" class="govuk-button">I would like to continue</a>
+            {% include '../includes/cover-letter.html' %}
+
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+
+            <a href="#" class="govuk-button--secondary govuk-!-display-block">Edit my cover letter</a>
+
+            <p class="or">OR</p>
+
+            <a href="../confirmation?employerName={{ job.company }}" class="govuk-button govuk-!-display-block">Send application now</a>
 
         </div>
 
 
-    </div>
+        </div>
 
 {% endblock %}

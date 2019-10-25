@@ -4,7 +4,8 @@ const router = express.Router()
 // type = mechanical, electrical, mason
 const user = {
   name: 'Victor',
-  type: 'electrical'
+  type: 'electrical',
+  phone: '+255 123456789'
 }
 
 const jobs = require('./data/jobs.json')
@@ -36,6 +37,15 @@ router.get(['/v1/apply/:jobId'], (req, res) => {
   const jobId = [req.params.jobId] || 0
   const job = jobs[jobId]
   res.render('v1/apply', {
+    user: user,
+    job: job
+  })
+})
+
+router.get(['/v1/check-details', '/v1/check-details/:jobId'], (req, res) => {
+  const jobId = [req.params.jobId] || 0
+  const job = jobs[jobId]
+  res.render('v1/check-details', {
     user: user,
     job: job
   })
