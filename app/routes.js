@@ -16,6 +16,13 @@ router.get('/v1/jobs', (req, res) => {
   })
 })
 
+router.get(['/v1/'], (req, res) => {
+  const keyboard = req.query.keyboard || false
+  res.render('v1/index', {
+    keyboard: keyboard
+  })
+})
+
 router.get(['/v1/job/:jobId'], (req, res) => {
   const jobId = [req.params.jobId] || 0
   const job = jobs[jobId]

@@ -39,6 +39,10 @@
             </form>
 
         </div>
+        {% if keyboard === 'true' %}
+            {% include '../includes/keyboard.html' %}
+        {% endif %}
     </div>
+
 
 {% endblock %}
