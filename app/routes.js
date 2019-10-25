@@ -1,8 +1,10 @@
 const express = require('express')
 const router = express.Router()
 
+// type = mechanical, electrical, mason
 const user = {
-  name: 'Victor'
+  name: 'Victor',
+  type: 'electrical'
 }
 
 const jobs = require('./data/jobs.json')

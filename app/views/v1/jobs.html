@@ -18,11 +18,14 @@
         <div class="govuk-grid-column-two-thirds">
 
             {% for job in jobs %}
+                {% if job.type === user.type %}
                 <div class="job-box">
                     <h2 class="govuk-heading-s">{{ job.role }} at {{ job.company }}</h2>
-                    <p>{{ job.description }}</p>
-                    <a href="./job/{{ job.id }}">View job</a>
+                    <p>{{ job.salary }}</p>
+                    <p>{{ job.location }}</p>
+                    <a href="./job/{{ job.id }}" class="jobLink">View job</a>
                 </div>
+                {% endif %}
             {% endfor %}
 
         </div>
