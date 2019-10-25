@@ -1,4 +1,4 @@
-{% macro kaziHeader(title, name, showName = true) %}
+{% macro kaziHeader(title, name, showName = true, showBackLink = true) %}
     {% if name and showName === true %}
 {#        <div id="topBanner">Signed in as {{ name }}</div>#}
     {% endif %}
@@ -7,8 +7,10 @@
         {% if title !== false %}
             {{ title }}
         {% endif %}
+        {% if name and showName === true %}
+            <a href="javascript:history.back(-1)" class="back">< Go back</a>
+        {% endif %}
 {#        Kazi Connect#}
     </h1>
-
 
 {% endmacro %}

@@ -46,6 +46,28 @@ ul {
   display: inline-block;
   vertical-align: middle;
 }
+input:focus {
+  outline: 3px solid $kaziGreen !important;
+}
+
+#code {
+  height: 5rem;
+  font-size: 5em;
+}
+
+#login {
+  .govuk-button {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    display: block;
+  }
+}
+
+.back {
+  margin-top: 2em;
+  display: block;
+  font-size: 0.4em;
+}
 
 .job-box {
   border-radius: 5px;
@@ -57,6 +79,17 @@ ul {
   &:hover, &:focus {
     background: rgba($govuk-border-colour, 0.5);
     cursor: pointer;
+  }
+
+  .jobLink {
+    display: block;
+    text-align: center;
+    background: $kaziGreen;
+    padding: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 3px solid #fff;
+    color: $kaziBlack
   }
 }
 

@@ -11,11 +11,11 @@
         <div class="govuk-grid-column-full">
 
             {% from '../includes/kazi-header.html' import kaziHeader %}
-            {{ kaziHeader('Well done ' + user.name + '!', user.name) }}
+            {{ kaziHeader('Well done ' + user.name + '!', user.name, false) }}
 
         </div>
 
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-full">
             {% include '../includes/kazi-header.html' %}
 
             <div class="govuk-panel govuk-panel--confirmation">

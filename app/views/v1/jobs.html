@@ -11,11 +11,14 @@
         <div class="govuk-grid-column-full">
 
             {% from '../includes/kazi-header.html' import kaziHeader %}
-            {{ kaziHeader('Jobs for ' + user.name, user.name) }}
+{#            {{ kaziHeader('Jobs for ' + user.name, user.name) }}#}
+            {{ kaziHeader('Welcome ' + user.name, user.name, false) }}
+
+            <h2 class="govuk-heading-m">Job opportunities for you:</h2>
 
         </div>
 
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-full">
 
             {% for job in jobs %}
                 {% if job.type === user.type %}
