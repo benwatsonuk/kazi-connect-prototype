@@ -1,0 +1,37 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+    Kazi Connect
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+            {% from '../includes/kazi-header.html' import kaziHeader %}
+            {{ kaziHeader('Check your cover letter', user.name) }}
+
+        </div>
+
+        <div class="govuk-grid-column-two-thirds" id="coverLetter">
+
+            {% include '../includes/cover-letter.html' %}
+
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+
+            <a href="#" class="govuk-button--secondary govuk-!-display-block">Edit my cover letter</a>
+
+            <p class="or">OR</p>
+
+            <a href="../confirmation?employerName={{ job.company }}" class="govuk-button govuk-!-display-block">Send application now</a>
+
+        </div>
+
+
+        </div>
+
+{% endblock %}

@@ -1,43 +1,88 @@
 
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
-{% endblock %}
+Kazi Connect - session setup{% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+        Session set up
+      </h1>
+<form method="post">
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      {% from "govuk/components/input/macro.njk" import govukInput %}
 
-      <h2 class="govuk-heading-m">About this page</h2>
+      {{ govukInput({
+        label: {
+          text: "Name"
+        },
+        id: "name",
+        name: "name"
+      }) }}
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+  {{ govukRadios({
+    idPrefix: "type",
+    name: "type",
+    fieldset: {
+      legend: {
+        text: "What is being studied?",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--xs"
+      }
+    },
+    items: [
+      {
+        value: "mechanical",
+        text: "Motor mechanics"
+      },
+      {
+        value: "electrical",
+        text: "Electrical installation"
+      },
+      {
+        value: "mason",
+        text: "Masonry and brickwork"
+      }
+    ]
+  }) }}
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+{#      {% from "govuk/components/select/macro.njk" import govukSelect %}#}
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-        <li>
-          <a href="https://design-system.service.gov.uk">
-            GOV.UK Design System
-          </a>
-        </li>
-      </ul>
+{#      {{ govukSelect({#}
+{#        id: "subject",#}
+{#        name: "subject",#}
+{#        label: {#}
+{#          text: "Subject being studied"#}
+{#        },#}
+{#        items: [#}
+{#          {#}
+{#            value: "mechanical",#}
+{#            text: "Motor mechanics"#}
+{#          },#}
+{#          {#}
+{#            value: "electrical",#}
+{#            text: "Electrical installation"#}
+{#          },#}
+{#          {#}
+{#            value: "mason",#}
+{#            text: "Masonry and brickwork"#}
+{#          }#}
+{#        ]#}
+{#      }) }}#}
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+    text: "Start session"
+  }) }}
+
+</form>
+
     </div>
 </div>
 

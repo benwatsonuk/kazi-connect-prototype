@@ -56,6 +56,18 @@ input:focus {
   text-align: center;
 }
 
+.countryFlag {
+  img {
+    max-height: 10em;
+  }
+  text-align: center;
+  a {
+    &:focus {
+      background: $kaziGreen !important;
+    }
+  }
+}
+
 .or {
   text-align: center;
   display: block;
